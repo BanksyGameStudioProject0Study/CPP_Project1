@@ -21,11 +21,18 @@ public:
 		UStaticMeshComponent* MyStaticmesh;
 	UPROPERTY(EditAnywhere, Category = "Component")
 		UParticleSystemComponent* MyParticle;
-	UPROPERTY(EditAnywhere, Category = "Component")
+	UPROPERTY(VisibleAnywhere, Category = "Component")
 		UBoxComponent* MyBox;
-	UPROPERTY(EditAnywhere, Category = "Component")
+	UPROPERTY(VisibleAnywhere, Category = "Component")
 		USceneComponent* ScenneComponent;
-
+	UPROPERTY(VisibleAnywhere, Category = "Num")
+		float a;
+	UPROPERTY(EditAnywhere, Category = "Num")
+		float b;
+	UPROPERTY(VisibleDefaultsOnly, Category = "Num")
+		float c;
+	UPROPERTY(EditDefaultsOnly, Category = "Num")
+		float d;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
